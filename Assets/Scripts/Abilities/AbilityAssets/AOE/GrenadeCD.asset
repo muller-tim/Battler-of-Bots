@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eab6b4119879214c8a867f5b4f07365, type: 3}
+  m_Name: GrenadeCD
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: -94422775, guid: c7d3217b2eb4dba419603506aa140400, type: 3}
+  description: Cooldown Reduction (RB)
+  cooldown: 3
+  activeTime: 0.1
+  Upgrades: []
+  animation: {fileID: 0}
+  abilityIcon: {fileID: 1593923451, guid: b3e895ed89c5a2048a95b9bb5b4ecb23, type: 3}
+  descriptionIcon: {fileID: -1532608837, guid: bf5d08f707550a64a91519960815f216, type: 3}
+  AbilitySlot: 2
+  bullet: {fileID: 219284826548497702, guid: a8da07e091a5d1b4891557be2a03b88c, type: 3}

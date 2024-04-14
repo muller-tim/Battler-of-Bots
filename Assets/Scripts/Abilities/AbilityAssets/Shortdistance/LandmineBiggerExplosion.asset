@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515a11654031bd04d83818deb13b692b, type: 3}
+  m_Name: LandmineBiggerExplosion
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: 727005493, guid: a59b5d26c2f1302428af6da3cdba52b9, type: 3}
+  description: Bigger Explosion (LB)
+  cooldown: 5
+  activeTime: 0.1
+  Upgrades: []
+  animation: {fileID: 0}
+  abilityIcon: {fileID: -1133072556, guid: 4cf1dc02df5a31c46b74877a7ff6c362, type: 3}
+  descriptionIcon: {fileID: 0}
+  AbilitySlot: 3
+  landmine: {fileID: 754125770711711478, guid: d2305dd5a5098714ca4deb61ece55217, type: 3}

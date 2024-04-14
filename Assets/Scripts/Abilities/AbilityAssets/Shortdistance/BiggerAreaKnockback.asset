@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1449cd727f9ce42a8795a01766ebb1, type: 3}
+  m_Name: BiggerAreaKnockback
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: 1724272498, guid: f0e896af132e0ef4b8745d09121de392, type: 3}
+  description: Bigger Knockback Area (LB)
+  cooldown: 3.3
+  activeTime: 0.2
+  Upgrades: []
+  animation: {fileID: 0}
+  abilityIcon: {fileID: -1353579045, guid: 5d2579c9137a2604ea30d60c1fb5ed8b, type: 3}
+  descriptionIcon: {fileID: 0}
+  AbilitySlot: 3
+  m_maxAngleDegrees: 60
+  m_distance: 60
+  m_force: 70
+  m_upwardsForce: 80
+  m_enableKinematicAfterTime: 1
+  m_layer:
+    serializedVersion: 2
+    m_Bits: 134217728
+  m_particleSystem: {fileID: 0}

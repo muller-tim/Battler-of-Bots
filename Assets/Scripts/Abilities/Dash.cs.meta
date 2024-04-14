@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1565aea6d0eb83941837a93c7b924227
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - nameIcon: {instanceID: 0}
+  - animation: {instanceID: 0}
+  - abilityIcon: {instanceID: 0}
+  - descriptionIcon: {instanceID: 0}
+  - startParticleSystem: {fileID: 8448303381211490788, guid: 4971c910680ae1b48a2f5e4a0f9e2d47,
+      type: 3}
+  - endParticleSystem: {fileID: 8448303381211490788, guid: 4971c910680ae1b48a2f5e4a0f9e2d47,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

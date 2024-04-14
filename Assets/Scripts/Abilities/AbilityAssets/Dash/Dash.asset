@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1565aea6d0eb83941837a93c7b924227, type: 3}
+  m_Name: Dash
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: -1081717364, guid: ab4cb832d91c9e643bedf214ec693365, type: 3}
+  description: Dash
+  cooldown: 1
+  activeTime: 0.3
+  Upgrades:
+  - {fileID: 11400000, guid: 4a7f86be9a8a11341ae790fccc611402, type: 2}
+  animation: {fileID: 0}
+  abilityIcon: {fileID: -1081717364, guid: ab4cb832d91c9e643bedf214ec693365, type: 3}
+  descriptionIcon: {fileID: 979460706, guid: ccb81b6caf07e1342a9008f0d3f2b92f, type: 3}
+  AbilitySlot: 4
+  startParticleSystem: {fileID: 8448303381211490788, guid: 4971c910680ae1b48a2f5e4a0f9e2d47,
+    type: 3}
+  endParticleSystem: {fileID: 8448303381211490788, guid: 4971c910680ae1b48a2f5e4a0f9e2d47,
+    type: 3}
+  dashSpeed: 60

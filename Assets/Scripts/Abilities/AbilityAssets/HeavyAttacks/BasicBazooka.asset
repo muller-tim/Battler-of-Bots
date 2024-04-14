@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01149f4c8cdeea4d99fd5ad10aef0a4, type: 3}
+  m_Name: BasicBazooka
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: -39178684, guid: 255b6567b4e22944e8671244eaf0270f, type: 3}
+  description: Shoot a Rocket (LT)
+  cooldown: 5
+  activeTime: 0.2
+  Upgrades:
+  - {fileID: 11400000, guid: 8ceedf6120a86764dbce3fe556e6a54c, type: 2}
+  - {fileID: 11400000, guid: 038b4d76b0f262e4a8a78d180e97234e, type: 2}
+  - {fileID: 11400000, guid: 8e9f4a57528598f469ddf3706df00109, type: 2}
+  animation: {fileID: 0}
+  abilityIcon: {fileID: -288766681, guid: 8beea08aa1ba2db4aa9f05b364b7bbc2, type: 3}
+  descriptionIcon: {fileID: 0}
+  AbilitySlot: 1
+  bullet: {fileID: 5080790508642040586, guid: f77afd477b902044d96039adc8b4f687, type: 3}
+  m_layer:
+    serializedVersion: 2
+    m_Bits: 134217728

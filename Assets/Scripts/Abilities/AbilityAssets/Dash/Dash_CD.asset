@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1565aea6d0eb83941837a93c7b924227, type: 3}
+  m_Name: Dash_CD
+  m_EditorClassIdentifier: 
+  nameIcon: {fileID: -214267882, guid: efb419b079f62b142a54b1536d50ff43, type: 3}
+  description: Dash with Lower Cooldown
+  cooldown: 0.5
+  activeTime: 0.3
+  Upgrades: []
+  animation: {fileID: 0}
+  abilityIcon: {fileID: -1081717364, guid: ab4cb832d91c9e643bedf214ec693365, type: 3}
+  descriptionIcon: {fileID: -1298651374, guid: 7306a45aee15c874aaeae8d279691534, type: 3}
+  AbilitySlot: 4
+  dashSpeed: 60

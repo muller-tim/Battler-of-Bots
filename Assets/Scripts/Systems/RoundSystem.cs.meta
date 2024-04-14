@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5074d3124790f364c94bb91d88b973b2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_spawnerSystem: {instanceID: 0}
+  - m_upgradeSystem: {instanceID: 0}
+  - m_gameTimer: {instanceID: 0}
+  - m_spawnDecals: {instanceID: 0}
+  - firstRoundAudioSource: {fileID: 8300000, guid: 38e422d51a291df4c8b692035b7dd4fc,
+      type: 3}
+  - audioSource: {instanceID: 0}
+  - audioSource1: {instanceID: 0}
+  - audioSource2: {instanceID: 0}
+  - audioSource3: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
