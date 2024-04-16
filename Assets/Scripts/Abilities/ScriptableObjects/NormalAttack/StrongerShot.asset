@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e25343eddb8cc489db36885bb2002f, type: 3}
   m_Name: StrongerShot
   m_EditorClassIdentifier: 
-  nameIcon: {fileID: 1143413094, guid: f3f74a2e800ea1749a52f7f1a76bf663, type: 3}
-  description: Stronger Rifle (RT)
-  cooldown: 0.2
-  activeTime: 0
+  NameSprite: {fileID: 0}
+  Description: 
+  DescriptionSprite: {fileID: 0}
+  Cooldown: 0
+  ActiveTime: 0
   Upgrades:
   - {fileID: 11400000, guid: ab65e3983fc676b40af90b100429a8d4, type: 2}
   - {fileID: 11400000, guid: 75766e2db161dd4488201e2cc7bf67a9, type: 2}
-  animation: {fileID: 0}
-  abilityIcon: {fileID: -376319546, guid: ea703e7e0da92564cae8a944f298a7c6, type: 3}
-  descriptionIcon: {fileID: 0}
+  Animation: {fileID: 0}
+  AbilityIcon: {fileID: 0}
   AbilitySlot: 0
-  bullet: {fileID: 8679732413348571899, guid: 92d2e79c95f67774a92f5622e3e83eb8, type: 3}
+  bullet: {fileID: 6725991459270396056, guid: 92d2e79c95f67774a92f5622e3e83eb8, type: 3}
+  aimAssistActivated: 1
   m_layer:
     serializedVersion: 2
     m_Bits: 134217728

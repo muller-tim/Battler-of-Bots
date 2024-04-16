@@ -56,6 +56,8 @@ public class AbilityHolder : MonoBehaviour {
     #region Unity Methods
     void Start()
     {
+        Debug.Assert(m_aimAssistLocation != null, "Aim Assist Location on Player ist not set");
+
         m_inputReader = GetComponent<InputReader>();
 
         // Initialize cooldowns with 0

@@ -7,7 +7,6 @@ public class Dash : AbilityBase
     public float dashSpeed;
     
     public override void Activate(GameObject parent) {
-        Debug.Log("DASH");
         MonoBehaviour behaviour = parent.GetComponent<MonoBehaviour>();
         behaviour.StartCoroutine(PerformDash(parent));
     }
