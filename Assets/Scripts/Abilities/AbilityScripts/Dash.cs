@@ -7,6 +7,7 @@ public class Dash : AbilityBase
     public float dashSpeed;
     
     public override void Activate(GameObject parent) {
+        Debug.Log("DASH");
         MonoBehaviour behaviour = parent.GetComponent<MonoBehaviour>();
         behaviour.StartCoroutine(PerformDash(parent));
     }
@@ -18,7 +19,7 @@ public class Dash : AbilityBase
 
         parent.GetComponent<ParticleSystemExecutor>().PlayStartParticle();
         float elapsedTime = 0f;
-        while (elapsedTime < activeTime)
+        while (elapsedTime < ActiveTime)
         {
             // Die lokale Blickrichtung des upperBody-Objekts um -90° verringern
             Vector3 forwardDirection = lowerBody.transform.TransformDirection(Vector3.forward);

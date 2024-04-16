@@ -12,11 +12,12 @@ public class NormalShoot : AbilityBase {
 
     private Transform m_aimLocation;
     public override void Activate(GameObject parent) {
+        Debug.Log("SHOOT");
         AbilityHolder abilityHolder = parent.GetComponent<AbilityHolder>();
         
         if (!abilityHolder.AbilityLocations[0]) return;
-        if (!abilityHolder.AimLocation) return;
-        m_aimLocation = abilityHolder.AimLocation;
+        if (!abilityHolder.AimAssistLocation) return;
+        m_aimLocation = abilityHolder.AimAssistLocation;
 
         Vector3 shootDirection = GetShootDirection(parent, abilityHolder.AbilityLocations[0]);
         GameObject spawnedBullet = Instantiate(bullet, abilityHolder.AbilityLocations[0].position, Quaternion.LookRotation(shootDirection) * bullet.transform.localRotation);

@@ -72,10 +72,10 @@ public class MenuManager : MonoBehaviour
 
                     for (int i = 0; i < upgradeMenu.slots.Length; i++)
                     {
-                        upgradeMenu.slots[i].icon.sprite = upgrades[i]?.abilityIcon;
-                        upgradeMenu.slots[i].nameIcon.sprite = upgrades[i]?.nameIcon;
+                        upgradeMenu.slots[i].icon.sprite = upgrades[i]?.AbilityIcon;
+                        upgradeMenu.slots[i].nameIcon.sprite = upgrades[i]?.NameSprite;
                         // upgradeMenu.slots[i].title.text = upgrades[i]?.abilityName;
-                        upgradeMenu.slots[i].description.text = upgrades[i]?.description;
+                        upgradeMenu.slots[i].description.text = upgrades[i]?.Description;
                     }
                 };
 
@@ -141,15 +141,15 @@ public class MenuManager : MonoBehaviour
     }
 
     private void SetAbilitiesIcons(HUDMenu hud) {
-        hud.skillIconNormal.sprite = abilityHolder.Abilities[0]?.abilityIcon;
-        hud.skillIconHeavy.sprite = abilityHolder.Abilities[1]?.abilityIcon;
-        hud.skillIconAOE.sprite = abilityHolder.Abilities[2]?.abilityIcon;
-        hud.skillIconShortDistance.sprite = abilityHolder.Abilities[3]?.abilityIcon;
+        hud.skillIconNormal.sprite = abilityHolder.Abilities[0]?.AbilityIcon;
+        hud.skillIconHeavy.sprite = abilityHolder.Abilities[1]?.AbilityIcon;
+        hud.skillIconAOE.sprite = abilityHolder.Abilities[2]?.AbilityIcon;
+        hud.skillIconShortDistance.sprite = abilityHolder.Abilities[3]?.AbilityIcon;
     }
 
     private float GetAbilityCooldown(int ability, in float[] currentCooldown) {
         if (abilityHolder.Abilities[ability]) {
-            return Get01Value(currentCooldown[ability], abilityHolder.Abilities[ability].cooldown);
+            return Get01Value(currentCooldown[ability], abilityHolder.Abilities[ability].Cooldown);
         }
 
         return 1.0f;

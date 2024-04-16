@@ -12,8 +12,8 @@ public class Bazooka : AbilityBase
         AbilityHolder abilityHolder = parent.GetComponent<AbilityHolder>();
 
         if (!abilityHolder.AbilityLocations[1]) return;
-        if (!abilityHolder.AimLocation) return;
-        m_aimLocation = abilityHolder.AimLocation;
+        if (!abilityHolder.AimAssistLocation) return;
+        m_aimLocation = abilityHolder.AimAssistLocation;
 
         Vector3 shootDirection = GetShootDirection(parent, abilityHolder.AbilityLocations[1]);
         GameObject spawnedBullet = Instantiate(bullet, abilityHolder.AbilityLocations[1].position, Quaternion.LookRotation(shootDirection) * bullet.transform.localRotation);

@@ -28,8 +28,8 @@ public class KnockbackAbility : AbilityBase {
 
 
         AbilityHolder abilityHolder = parent.GetComponent<AbilityHolder>();
-        if (!abilityHolder.AimLocation) return;
-        m_aimLocation = abilityHolder.AimLocation;
+        if (!abilityHolder.AimAssistLocation) return;
+        m_aimLocation = abilityHolder.AimAssistLocation;
 
         enemiesHit.Clear();
         Vector3 forward = m_aimLocation.forward;

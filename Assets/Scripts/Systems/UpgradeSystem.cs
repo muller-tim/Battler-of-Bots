@@ -122,7 +122,7 @@ public class UpgradeSystem : MonoBehaviour {
     }
 
     private void RemoveAbilitesFromStartPool(int ability) {
-        AbilitySpecifier slot = m_upgradableAbilites[ability].AbilitySlot;
+        AbilitySlotIndexName slot = m_upgradableAbilites[ability].AbilitySlot;
 
         for (int i = 0; i < m_startAbilities.Length; i++)
         {
