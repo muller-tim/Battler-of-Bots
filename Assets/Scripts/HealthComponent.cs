@@ -5,70 +5,158 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    [SerializeField, Range(0, 10000)] private float m_MaxHealth = 100.0f;
-    public float m_currentHealth;
-    public bool m_isDead = false;
-    private bool m_isInvincible = false;
+    #region Public Properties
 
-    public event Action OnDeath;
-    public event Action OnHealthChange;
+    /// <summary>
+    /// Defines the maximum health of the owner
+    /// </summary>
+    public float MaxHealth => m_maxHealth;
 
-    public float MaxHealth => m_MaxHealth;
-    public AudioClip damageSound;
-    public AudioClip deathSound;
-    
-    public float Health {
+    /// <summary>
+    /// Returns if the owner is alive
+    /// </summary>
+    public bool IsAlive => !m_isDead;
+
+    /// <summary>
+    /// Current Health of the owner
+    /// </summary>
+    public float Health
+    {
         get => m_currentHealth;
-        private set {
-            m_currentHealth = Mathf.Clamp(value, 0, m_MaxHealth);
+        private set
+        {
+            m_currentHealth = Mathf.Clamp(value, 0, m_maxHealth);
             OnHealthChange?.Invoke();
         }
     }
 
-    public bool Invincible {
+    /// <summary>
+    /// Defines if the owner is currently invincible
+    /// </summary>
+    public bool Invincible
+    {
         get => m_isInvincible;
         set => m_isInvincible = value;
     }
 
-    void Awake() {
-        m_currentHealth = m_MaxHealth;
+    #endregion
+
+    #region Public Events
+
+    /// <summary>
+    /// Event is called when <see cref="Health"/> of the owner is 0
+    /// </summary>
+    public event Action OnDeath;
+
+    /// <summary>
+    /// Event is called when <see cref="Health"/> changes in any way 
+    /// </summary>
+    public event Action OnHealthChange;
+
+    #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// <see cref="Health"/> is reduced by <paramref name="damage"/> if owner is not invincible
+    /// </summary>
+    /// <param name="damage"></param>
+    public void TakeDamage(float damage)
+    {
+        if (!m_isInvincible)
+        {
+            // Damage Sound
+            if (Health - damage > 0 && m_damageSound != null)
+                AudioSource.PlayClipAtPoint(m_damageSound, transform.position);
+
+            Health -= damage;
+        }
+
+        if (Health <= 0 && !m_isDead)
+        {
+            // Deathsound
+            if (m_deathSound != null)
+                AudioSource.PlayClipAtPoint(m_deathSound, transform.position);
+
+            m_isDead = true;
+            OnDeath?.Invoke();
+        }
     }
 
+    /// <summary>
+    /// Increases <see cref="Health"/> by <paramref name="amount"/> if the owner is not dead
+    /// </summary>
+    /// <param name="amount"></param>
+    public void Heal(float amount)
+    {
+        if (!m_isDead)
+        {
+            Health += amount;
+        }
+    }
+
+    /// <summary>
+    /// Owner takes <see cref="m_maxHealth"/> damage and dies
+    /// </summary>
     [ContextMenu("Kill")]
-    public void Kill() {
-        TakeDamage(m_MaxHealth);
+    public void Kill()
+    {
+        TakeDamage(m_maxHealth);
     }
 
-    [ContextMenu("Take Damage")]
+    #endregion
+
+    #region Unity Methods
+
+    void Awake()
+    {
+        m_currentHealth = m_maxHealth;
+    }
+
+    #endregion
+
+    #region Private Methods
+
+    [ContextMenu("Take Damage"), Tooltip("Deal 20 Damage")]
     private void TakeSomeDamage()
     {
         TakeDamage(20);
         Debug.LogError(Health);
     }
 
-    public void TakeDamage(float damage) {
-        Debug.Log("Enemy got damaged");
-        if (!m_isInvincible) {
-            if(Health - damage > 0 && damageSound != null)
-                AudioSource.PlayClipAtPoint(damageSound, transform.position);
-            Health -= damage;
-        }
+    #endregion
 
-        if (Health <= 0 && !m_isDead) {
-            if(deathSound != null)
-                AudioSource.PlayClipAtPoint(deathSound, transform.position);
-            m_isDead = true;
-            OnDeath?.Invoke();
-        }
-    }
+    #region Private Member
 
-    public void Heal(float amount) {
-        if (!m_isDead) {
-            Health += amount;
-        }
-    }
+    /// <summary>
+    /// Defines the maximum health
+    /// </summary>
+    [SerializeField, Range(0, 10000)] private float m_maxHealth = 100.0f;
 
-    public bool IsAlive() {
-        return !m_isDead;
-    }
+    /// <summary>
+    /// Sound is played when taking damage
+    /// </summary>
+    [SerializeField] private AudioClip m_damageSound;
+
+    /// <summary>
+    /// Sound is played when the owner dies
+    /// </summary>
+    [SerializeField] private AudioClip m_deathSound;
+
+    /// <summary>
+    /// Current health of the owner
+    /// </summary>
+    private float m_currentHealth;
+
+    /// <summary>
+    /// Current state if the owner is dead or alive
+    /// </summary>
+    private bool m_isDead = false;
+
+    /// <summary>
+    /// Defines if the owner can take damage
+    /// </summary>
+    private bool m_isInvincible = false;
+
+    #endregion
 }

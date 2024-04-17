@@ -47,10 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_startAbilities:
-  - {fileID: 11400000, guid: 972eb446e0fc9e6498af3bfa12eebf36, type: 2}
+  - {fileID: 11400000, guid: 40aeb0a37e4991a4d87c98e37c787cff, type: 2}
   - {fileID: 11400000, guid: 4ba046be537bdc345886282ada391b9c, type: 2}
   - {fileID: 11400000, guid: dc1261a4a90ca6043b6138bec74a5d79, type: 2}
   - {fileID: 11400000, guid: e64210670b03b7348989d12cfc77d349, type: 2}
+  m_healAfterUpgrade: 0
+  m_healAmount: 25
 --- !u!135 &6324516835247870039
 SphereCollider:
   m_ObjectHideFlags: 0

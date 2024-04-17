@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58e25343eddb8cc489db36885bb2002f, type: 3}
-  m_Name: BazookaCD
+  m_Name: BazookaBiggerExplosion
   m_EditorClassIdentifier: 
   NameSprite: {fileID: -39178684, guid: 255b6567b4e22944e8671244eaf0270f, type: 3}
   Description: Bazooka

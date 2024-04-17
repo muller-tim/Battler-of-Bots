@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e25343eddb8cc489db36885bb2002f, type: 3}
   m_Name: EvenFasterShot
   m_EditorClassIdentifier: 
-  NameSprite: {fileID: 0}
+  NameSprite: {fileID: 2047615789, guid: 42f7355e00dc66447b857bf3961ecfdd, type: 3}
   Description: 
   DescriptionSprite: {fileID: 0}
-  Cooldown: 0
+  Cooldown: 0.07
   ActiveTime: 0
   Upgrades:
   - {fileID: 11400000, guid: 8d868a3f822459e4e8c9aa9bc40f84b9, type: 2}
   Animation: {fileID: 0}
-  AbilityIcon: {fileID: 0}
+  AbilityIcon: {fileID: -2138764820, guid: d89f0929ba50a0f4ca97e6f14d6896fb, type: 3}
   AbilitySlot: 0
   bullet: {fileID: 8398321611801310441, guid: d2fd7acd5db90b94bb6fd5608592a41b, type: 3}
   aimAssistActivated: 1

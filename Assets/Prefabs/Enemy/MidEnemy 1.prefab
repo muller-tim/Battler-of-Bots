@@ -101,11 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70cb6759ebf80e4b982af168ff8c65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 100
-  m_currentHealth: 0
-  m_isDead: 0
-  damageSound: {fileID: 8300000, guid: 0f0a5ae8f8d760844bad1d170caf954e, type: 3}
-  deathSound: {fileID: 8300000, guid: acb5e31456b1508409594b65f38ebae8, type: 3}
+  m_maxHealth: 100
+  m_damageSound: {fileID: 8300000, guid: 4f73120605b134a4194c76226feee3ca, type: 3}
+  m_deathSound: {fileID: 8300000, guid: acb5e31456b1508409594b65f38ebae8, type: 3}
 --- !u!195 &6663947178324107549
 NavMeshAgent:
   m_ObjectHideFlags: 0

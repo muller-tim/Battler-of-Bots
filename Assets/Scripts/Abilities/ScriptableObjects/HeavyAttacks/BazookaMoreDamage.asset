@@ -9,19 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b01149f4c8cdeea4d99fd5ad10aef0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 58e25343eddb8cc489db36885bb2002f, type: 3}
   m_Name: BazookaMoreDamage
   m_EditorClassIdentifier: 
-  nameIcon: {fileID: -39178684, guid: 255b6567b4e22944e8671244eaf0270f, type: 3}
-  description: More Damage (LT)
-  cooldown: 5
-  activeTime: 0.2
-  Upgrades: []
-  animation: {fileID: 0}
-  abilityIcon: {fileID: -288766681, guid: 8beea08aa1ba2db4aa9f05b364b7bbc2, type: 3}
-  descriptionIcon: {fileID: 0}
+  NameSprite: {fileID: -39178684, guid: 255b6567b4e22944e8671244eaf0270f, type: 3}
+  Description: Bazooka
+  DescriptionSprite: {fileID: 0}
+  Cooldown: 5
+  ActiveTime: 0.3
+  Upgrades:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Animation: {fileID: 0}
+  AbilityIcon: {fileID: -288766681, guid: 8beea08aa1ba2db4aa9f05b364b7bbc2, type: 3}
   AbilitySlot: 1
-  bullet: {fileID: 5412917944456598510, guid: abd77929e4efbd946a5a29d2743c30c7, type: 3}
+  bullet: {fileID: 5268805529684569123, guid: f77afd477b902044d96039adc8b4f687, type: 3}
+  aimAssistActivated: 1
   m_layer:
     serializedVersion: 2
     m_Bits: 134217728
