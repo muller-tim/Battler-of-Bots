@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eab6b4119879214c8a867f5b4f07365, type: 3}
   m_Name: BasicGrenade
   m_EditorClassIdentifier: 
-  nameIcon: {fileID: -94422775, guid: c7d3217b2eb4dba419603506aa140400, type: 3}
-  description: Throw a Grenade (RB)
-  cooldown: 5
-  activeTime: 0.1
+  NameSprite: {fileID: -94422775, guid: c7d3217b2eb4dba419603506aa140400, type: 3}
+  Description: 
+  DescriptionSprite: {fileID: 0}
+  Cooldown: 0
+  ActiveTime: 0
   Upgrades:
   - {fileID: 11400000, guid: 1e95663348df78042b854b07004fae6b, type: 2}
   - {fileID: 11400000, guid: f0e9a3104556e964bb7b4ebee45b0100, type: 2}
   - {fileID: 11400000, guid: 3bcac905e238bad48967ce43fc648d18, type: 2}
-  animation: {fileID: 0}
-  abilityIcon: {fileID: 1593923451, guid: b3e895ed89c5a2048a95b9bb5b4ecb23, type: 3}
-  descriptionIcon: {fileID: -2124726658, guid: 7b47aca3a51447349ab03dea9ac638e1, type: 3}
+  Animation: {fileID: 0}
+  AbilityIcon: {fileID: 0}
   AbilitySlot: 2
   bullet: {fileID: 219284826548497702, guid: a8da07e091a5d1b4891557be2a03b88c, type: 3}

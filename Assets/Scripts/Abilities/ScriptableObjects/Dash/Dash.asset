@@ -22,4 +22,4 @@ MonoBehaviour:
   Animation: {fileID: 0}
   AbilityIcon: {fileID: 0}
   AbilitySlot: 4
-  dashSpeed: 60
+  m_dashSpeed: 60

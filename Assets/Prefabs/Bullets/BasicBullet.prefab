@@ -39564,7 +39564,7 @@ GameObject:
   - component: {fileID: 1983834732170888316}
   - component: {fileID: 5132853531572710502}
   - component: {fileID: 8332749291459493080}
-  - component: {fileID: 8398321611801310441}
+  - component: {fileID: 7107650604960846769}
   m_Layer: 29
   m_Name: BasicBullet
   m_TagString: Untagged
@@ -39616,7 +39616,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -39636,7 +39636,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -39644,7 +39644,7 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8398321611801310441
+--- !u!114 &7107650604960846769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39653,26 +39653,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5886145607175591562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9519f082a0f996e448a6016636bbe593, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b986083fdbfaef4593889b1202bf54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 50
   m_damage: 20
   m_maxLifeTime: 3
-  m_isBouncy: 0
-  m_bounciness: 0
-  m_useGravity: 0
   m_maxCollisions: 1
-  m_explosion: {fileID: 783943145804038872}
-  m_explosionAudioSource: {fileID: 1852122785938055652}
-  m_shotAudioClip: {fileID: 8300000, guid: 38e422d51a291df4c8b692035b7dd4fc, type: 3}
-  m_explosive: 0
-  m_explodeOnTouch: 0
-  m_explosionForce: 0
-  m_explosionRange: 0
-  m_layer:
-    serializedVersion: 2
-    m_Bits: 0
+  m_collisionParticles: {fileID: 783943145804038872}
+  m_collisionAudio: {fileID: 1852122785938055652}
+  m_shootAudioClip: {fileID: 0}
 --- !u!1 &7668759563353368100
 GameObject:
   m_ObjectHideFlags: 0

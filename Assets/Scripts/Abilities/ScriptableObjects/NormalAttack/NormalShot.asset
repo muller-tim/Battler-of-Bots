@@ -23,7 +23,7 @@ MonoBehaviour:
   Animation: {fileID: 0}
   AbilityIcon: {fileID: -1989959551, guid: e50ad488876e8da418e1d6ef5717cd8e, type: 3}
   AbilitySlot: 0
-  bullet: {fileID: 8398321611801310441, guid: d2fd7acd5db90b94bb6fd5608592a41b, type: 3}
+  bullet: {fileID: 7107650604960846769, guid: d2fd7acd5db90b94bb6fd5608592a41b, type: 3}
   aimAssistActivated: 1
   m_layer:
     serializedVersion: 2

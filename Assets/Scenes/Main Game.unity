@@ -12664,6 +12664,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7534788822855874150, guid: 113592f41c5a8ad41907f7c7b3b5678f,
+        type: 3}
+      propertyPath: m_abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 40aeb0a37e4991a4d87c98e37c787cff,
+        type: 2}
+    - target: {fileID: 7534788822855874150, guid: 113592f41c5a8ad41907f7c7b3b5678f,
+        type: 3}
+      propertyPath: m_abilities.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5237e034d53ec344789a396b7ac7ba44,
+        type: 2}
+    - target: {fileID: 7534788822855874150, guid: 113592f41c5a8ad41907f7c7b3b5678f,
+        type: 3}
+      propertyPath: m_abilities.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: e64210670b03b7348989d12cfc77d349,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

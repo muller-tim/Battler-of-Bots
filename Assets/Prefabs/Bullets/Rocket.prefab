@@ -14973,9 +14973,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6459074769079548728}
   - component: {fileID: 246545755241033476}
-  - component: {fileID: 5268805529684569123}
   - component: {fileID: 5320857149703388667}
   - component: {fileID: 7232610954215914670}
+  - component: {fileID: 5931712117688921391}
+  - component: {fileID: 5743700797212551164}
   m_Layer: 29
   m_Name: Rocket
   m_TagString: Untagged
@@ -15020,7 +15021,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -15028,35 +15029,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5268805529684569123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5080790508642040586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9519f082a0f996e448a6016636bbe593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_speed: 25
-  m_damage: 50
-  m_maxLifeTime: 5
-  m_isBouncy: 0
-  m_bounciness: 0
-  m_useGravity: 0
-  m_maxCollisions: 1
-  m_explosion: {fileID: 6731827072392659650}
-  m_explosionAudioSource: {fileID: 2127510918436570614}
-  m_shotAudioClip: {fileID: 8300000, guid: 38e422d51a291df4c8b692035b7dd4fc, type: 3}
-  m_explosive: 1
-  m_explodeOnTouch: 1
-  m_explosionForce: 200
-  m_explosionRange: 7
-  m_layer:
-    serializedVersion: 2
-    m_Bits: 134217728
 --- !u!54 &5320857149703388667
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15206,6 +15178,48 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &5931712117688921391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080790508642040586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b986083fdbfaef4593889b1202bf54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 25
+  m_damage: 0
+  m_maxLifeTime: 5
+  m_maxCollisions: 1
+  m_collisionParticles: {fileID: 0}
+  m_collisionAudio: {fileID: 0}
+  m_shootAudioClip: {fileID: 8300000, guid: 38e422d51a291df4c8b692035b7dd4fc, type: 3}
+--- !u!114 &5743700797212551164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080790508642040586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb6fb8a3beb0c4a86e1b86cf154428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_explosionForce: 200
+  m_explosionDamage: 50
+  m_explosionRange: 7
+  m_layer:
+    serializedVersion: 2
+    m_Bits: 134217728
+  m_isProjectile: 1
+  m_explodeOnTouch: 0
+  m_explosionTimer: 0
+  m_explosionParticleSystem: {fileID: 6731827072392659650}
+  m_explosionAudio: {fileID: 2127510918436570614}
 --- !u!1 &5154955094249536983
 GameObject:
   m_ObjectHideFlags: 0

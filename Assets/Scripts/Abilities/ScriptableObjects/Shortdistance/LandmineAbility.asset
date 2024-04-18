@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515a11654031bd04d83818deb13b692b, type: 3}
   m_Name: LandmineAbility
   m_EditorClassIdentifier: 
-  nameIcon: {fileID: 727005493, guid: a59b5d26c2f1302428af6da3cdba52b9, type: 3}
-  description: Drop a Landmine (LB)
-  cooldown: 5
-  activeTime: 0.1
+  NameSprite: {fileID: -1133072556, guid: 4cf1dc02df5a31c46b74877a7ff6c362, type: 3}
+  Description: 
+  DescriptionSprite: {fileID: 0}
+  Cooldown: 3
+  ActiveTime: 0.1
   Upgrades:
   - {fileID: 11400000, guid: 579c8e3326cb97f45a2781cd81635d72, type: 2}
   - {fileID: 11400000, guid: 086f5d36866019d4881702c12618f583, type: 2}
   - {fileID: 11400000, guid: 6389c9e021581384f9d35d61a901d6d6, type: 2}
-  animation: {fileID: 0}
-  abilityIcon: {fileID: -1133072556, guid: 4cf1dc02df5a31c46b74877a7ff6c362, type: 3}
-  descriptionIcon: {fileID: 0}
+  Animation: {fileID: 0}
+  AbilityIcon: {fileID: -1133072556, guid: 4cf1dc02df5a31c46b74877a7ff6c362, type: 3}
   AbilitySlot: 3
-  landmine: {fileID: 5992415018078874061, guid: 2d9ee8027f9798642b5ca07445abbb8a,
+  m_objectToSpawn: {fileID: 5992415018078874061, guid: 2d9ee8027f9798642b5ca07445abbb8a,
     type: 3}

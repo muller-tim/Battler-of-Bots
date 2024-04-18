@@ -17,10 +17,7 @@ MonoBehaviour:
   DescriptionSprite: {fileID: 0}
   Cooldown: 5
   ActiveTime: 0.3
-  Upgrades:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Upgrades: []
   Animation: {fileID: 0}
   AbilityIcon: {fileID: -288766681, guid: 8beea08aa1ba2db4aa9f05b364b7bbc2, type: 3}
   AbilitySlot: 1

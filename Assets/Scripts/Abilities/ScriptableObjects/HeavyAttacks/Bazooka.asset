@@ -18,13 +18,13 @@ MonoBehaviour:
   Cooldown: 5
   ActiveTime: 0.3
   Upgrades:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b521068f3ecb2c340baee6ddd97bb147, type: 2}
+  - {fileID: 11400000, guid: 27d83265620d87b47ae04f8b05ceeeb7, type: 2}
+  - {fileID: 11400000, guid: 1eacfc7dbb32b9f4ebb044f151402763, type: 2}
   Animation: {fileID: 0}
   AbilityIcon: {fileID: -288766681, guid: 8beea08aa1ba2db4aa9f05b364b7bbc2, type: 3}
   AbilitySlot: 1
-  bullet: {fileID: 5268805529684569123, guid: f77afd477b902044d96039adc8b4f687, type: 3}
+  bullet: {fileID: 5931712117688921391, guid: f77afd477b902044d96039adc8b4f687, type: 3}
   aimAssistActivated: 1
   m_layer:
     serializedVersion: 2

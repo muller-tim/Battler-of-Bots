@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8100048540106771705}
   - component: {fileID: 5978878631322596532}
   - component: {fileID: 1951365386254874412}
-  - component: {fileID: 7063840831757686249}
+  - component: {fileID: 4284527114052396548}
+  - component: {fileID: 708088617882995180}
   m_Layer: 29
   m_Name: Grenade
   m_TagString: Untagged
@@ -32,7 +33,6 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 8063850777932765124}
   - {fileID: 8435895456891738959}
   - {fileID: 4417018178584545186}
   - {fileID: 3077644469846428022}
@@ -86,7 +86,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7063840831757686249
+--- !u!114 &4284527114052396548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 219284826548497702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c546803ec543042a11d256a706c9e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b986083fdbfaef4593889b1202bf54e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 30
-  m_maxLifeTime: 3
+  m_speed: 25
+  m_damage: 0
+  m_maxLifeTime: 2
   m_maxCollisions: 4
+  m_collisionParticles: {fileID: 0}
+  m_collisionAudio: {fileID: 0}
+  m_shootAudioClip: {fileID: 0}
+--- !u!114 &708088617882995180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219284826548497702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb6fb8a3beb0c4a86e1b86cf154428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_explosionForce: 200
+  m_explosionDamage: 50
+  m_explosionRange: 7
+  m_layer:
+    serializedVersion: 2
+    m_Bits: 134217728
+  m_isProjectile: 1
+  m_explodeOnTouch: 1
+  m_explosionTimer: 0
+  m_explosionParticleSystem: {fileID: 3077644469846428016}
+  m_explosionAudio: {fileID: 7649901970748575341}
 --- !u!1 &465977750271206048
 GameObject:
   m_ObjectHideFlags: 0
@@ -34525,102 +34552,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &3879590356379500756
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8063850777932765124}
-  - component: {fileID: 5199043871154177058}
-  - component: {fileID: 1782506492252389960}
-  - component: {fileID: 9098920892496411005}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8063850777932765124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879590356379500756}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 8100048540106771705}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5199043871154177058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879590356379500756}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88dbd031ec056724898832bf8b15e982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_explosion: {fileID: 3077644469846428016}
-  m_explosionAudioSource: {fileID: 7649901970748575341}
-  m_damage: 40
-  m_explosionRange: 5
-  m_explosionForce: 50
-  m_layer:
-    serializedVersion: 2
-    m_Bits: 134217728
---- !u!135 &1782506492252389960
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879590356379500756}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9098920892496411005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879590356379500756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ffee00d417dd840986d1365f792896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_explosion: {fileID: 3077644469846428016}
-  m_explosionAudioSource: {fileID: 7649901970748575341}
-  m_shotAudioClip: {fileID: 8300000, guid: ab0287fc50f084c41998d6257f597fa5, type: 3}
-  m_damage: 40
-  m_explosionForce: 10
-  m_explosionRange: 5
-  m_layer:
-    serializedVersion: 2
-    m_Bits: 134217728
 --- !u!1 &4753895909108983273
 GameObject:
   m_ObjectHideFlags: 0
