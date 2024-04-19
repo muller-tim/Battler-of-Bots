@@ -4,42 +4,98 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class KinematicController : MonoBehaviour {
-    [SerializeField] private bool m_autoEnable = true;
-    [SerializeField] private float m_autoEnableTime = 0.5f;
-    [SerializeField] private float m_maxTimeToEnable = 2.0f;
-    private float m_timer;
-    private float m_MaxTimer;
-    private Rigidbody m_rb;
-    void Start() {
-        m_rb = GetComponent<Rigidbody>();
+
+    #region Public Methods
+
+    /// <summary>
+    /// Enables Kinematic on the rigidbody of the gameObject
+    /// </summary>
+    public void EnableKinematic()
+    {
+        m_rigidbody.isKinematic = true;
     }
 
-    void Update() {
-        if (m_autoEnable && m_timer <= 0.0f && !m_rb.isKinematic && m_rb.velocity.magnitude < 1.0f) {
-            EnableKinematic();
-        }
+    /// <summary>
+    /// Disables Kinematic on the rigidbody of the gameObject and start the timers <see cref="m_minTimer"/> and <see cref="m_maxTimer"/>
+    /// </summary>
+    public void DisableKinematic()
+    {
+        m_minTimer = m_minDisabledTime;
+        m_maxTimer = m_maxDisabledTime;
+        m_rigidbody.isKinematic = false;
+    }
 
-        if (m_autoEnable && m_MaxTimer <= 0.0f && !m_rb.isKinematic) {
-            EnableKinematic();
-        }
+    #endregion
 
-        if (m_timer > 0.0f) {
-            m_timer -= Time.deltaTime;
-        }
+    #region Unity Methods
 
-        if (m_MaxTimer > 0.0f)
+    void Start()
+    {
+        m_rigidbody = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        if (m_autoEnable && m_minTimer <= 0.0f && !m_rigidbody.isKinematic && m_rigidbody.velocity.magnitude < m_velocityThreshold)
         {
-            m_MaxTimer -= Time.deltaTime;
+            EnableKinematic();
+        }
+
+        if (m_autoEnable && m_maxTimer <= 0.0f && !m_rigidbody.isKinematic)
+        {
+            EnableKinematic();
+        }
+
+        if (m_minTimer > 0.0f)
+        {
+            m_minTimer -= Time.deltaTime;
+        }
+
+        if (m_maxTimer > 0.0f)
+        {
+            m_maxTimer -= Time.deltaTime;
         }
     }
 
-    public void EnableKinematic() {
-        m_rb.isKinematic = true;
-    }
+    #endregion
 
-    public void DisableKinematic() {
-        m_timer = m_autoEnableTime;
-        m_MaxTimer = m_maxTimeToEnable;
-        m_rb.isKinematic = false;
-    }
+    #region Private Member
+
+    /// <summary>
+    /// Determines if kinematic should automatically enable when the velocity reaches <see cref="m_velocityThreshold"/> and  <see cref="m_minTimer"/> reaches 0.
+    /// Or when <see cref="m_maxTimer"/> reaches 0
+    /// </summary>
+    [SerializeField] private bool m_autoEnable = true;
+
+    /// <summary>
+    /// The threshold the velocity of the rigidbody needs to reach to re-enable kinematic
+    /// </summary>
+    [SerializeField] private float m_velocityThreshold = 1.0f;
+
+    /// <summary>
+    /// The minimum time until kinematic can be re-enabled
+    /// </summary>
+    [SerializeField] private float m_minDisabledTime = 0.5f;
+
+    /// <summary>
+    /// The maximum time kinematic can be disabled;
+    /// </summary>
+    [SerializeField] private float m_maxDisabledTime = 2.0f;
+
+    /// <summary>
+    /// The timer for <see cref="m_minDisabledTime"/>
+    /// </summary>
+    private float m_minTimer;
+
+    /// <summary>
+    /// The timer for <see cref="m_maxDisabledTime"/>
+    /// </summary>
+    private float m_maxTimer;
+
+    /// <summary>
+    /// The rigidbody of the gameObject
+    /// </summary>
+    private Rigidbody m_rigidbody;
+
+    #endregion
 }
